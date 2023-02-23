@@ -16,21 +16,54 @@ body {
 
     &--main {
         display: block;
-        font-size: 6rem;
+        font-size: $font-size-Xlarge;
         font-weight: 400;
-        letter-spacing: 3.5rem;
-        margin-right: -3.5rem;
+        letter-spacing: $font-size-large;
+        margin-right: -$font-size-large;
     
         animation: moveInLeft 3s ease-out;
     }
     
     &--sub {
         display: block;
-        font-size: 2rem;
+        font-size: $font-size-mediumLarge;
         font-weight: 700;
-        letter-spacing: 1.75rem;
-        margin-right: -1.75rem;
+        letter-spacing: $font-size-medium;
+        margin-right: -$font-size-medium;
     
         animation: moveInRight 3s ease-out;
+    }
+}
+
+.heading-secondary {
+    font-size: $font-size-large;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: $font-size-medium;
+    transition: all .2s;
+    
+    //make text color a linear gradient
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-clip: text;
+    color: transparent;
+
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $font-size-medium;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $font-size-small;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
